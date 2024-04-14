@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate") %>
+<a href="/products" class="btn btn-dark"><i class="fa-solid fa-arrow-left"></i></a>
+<div class="row mt-3">
+    <div class="col-8 offset-3">
+<h3>Product</h3>
+   </div>
+    <% if (products.length > 0) { %>
+       <div class="result">
+            <% products.forEach(product => { %>
+                <div class="card col-6 offset-3 show-card result-img">
+                <p><img src="<%= product.image %>" class="result-img" alt="product-img"></p>
+                <p class="card-text">Title: <b><%= product.title %></b></p>
+            <p class="description"><b>Description:</b> <%= product.description %></p>
+              <p><b>&#8377;</b><%= product.price.toLocaleString("en-In") %> /only</p>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <p>No products found matching your search query.</p>
+    <% } %>
+        </div>
+       
+
+    <!-- Add any additional HTML or styling here -->

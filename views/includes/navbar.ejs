@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom  sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/products"><i class="fa-solid fa-cart-shopping shopping-icon"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/products">All Product</a>
+          <a class="nav-link" href="/products/new">Add new Product</a>
+          <div class="search-form">
+          <form action="/search" method="POST">
+            <input type="text" name="query" placeholder="Search products..." required>
+            <button type="submit">Search</button>
+        </form>
+      </div>
+        </div>
+      </div>
+    </div>
+  </nav>
